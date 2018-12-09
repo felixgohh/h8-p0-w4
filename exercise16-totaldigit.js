@@ -1,15 +1,15 @@
 function totalDigitRekursif(angka) {
     
-    var strAngka = String(angka)
-    var sum = 0
+    var angkaStr = angka.toString()
+    var total = 0
 
-    if (strAngka.length > 1) {
-        sum += Number(strAngka[0])
-        angka = Number(strAngka.substr(1))
+    if (angkaStr.length > 1) {
+        total += Number(angkaStr[0])
+        angka = Number(angkaStr.substring(1))
     } else {
-        return Number(strAngka[0])
+        return Number(angkaStr[0])
     }
-    return sum + totalDigitRekursif(angka)
+    return total + totalDigitRekursif(angka)
 }
 
 // // TEST CASES
